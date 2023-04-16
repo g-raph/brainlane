@@ -45,22 +45,27 @@
             padding: 0;
             list-style: none;
             li {
-                padding: .75rem 1rem;
-                border-bottom: 1px dashed var(--separatorColor);
-                font-size: 1.125rem;
-                background-color: transparent;
-                transition: all .3s ease;
-                cursor: pointer;
-                &:hover {
-                    background-color: var(--iconBGColor);
-                    color: var(--primaryColor);
-                }
-                &.active {
-                    background-color: var(--tertiaryColor);
-                    color: var(--white);
-                }
-                &:first-child {
-                    border-top: 1px dashed var(--separatorColor);
+                padding: 0;
+                a {
+                    border-bottom: 1px dashed var(--separatorColor);
+                    font-size: 1.125rem;
+                    background-color: transparent;
+                    transition: all .3s ease;
+                    padding: .75rem 1rem;
+                    display: block;
+                    color: var(--textColor);
+                    text-decoration: none;
+                    &:hover {
+                        background-color: var(--iconBGColor);
+                        color: var(--primaryColor);
+                    }
+                    &.active {
+                        background-color: var(--tertiaryColor);
+                        color: var(--white);
+                    }
+                    &:first-child {
+                        border-top: 1px dashed var(--separatorColor);
+                    }
                 }
             }
         }

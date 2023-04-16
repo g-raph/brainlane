@@ -799,22 +799,27 @@ img {
   list-style: none;
 }
 .side-menu--top ul li {
-  padding: 0.75rem 1rem;
+  padding: 0;
+}
+.side-menu--top ul li a {
   border-bottom: 1px dashed var(--separatorColor);
   font-size: 1.125rem;
   background-color: transparent;
   transition: all 0.3s ease;
-  cursor: pointer;
+  padding: 0.75rem 1rem;
+  display: block;
+  color: var(--textColor);
+  text-decoration: none;
 }
-.side-menu--top ul li:hover {
+.side-menu--top ul li a:hover {
   background-color: var(--iconBGColor);
   color: var(--primaryColor);
 }
-.side-menu--top ul li.active {
+.side-menu--top ul li a.active {
   background-color: var(--tertiaryColor);
   color: var(--white);
 }
-.side-menu--top ul li:first-child {
+.side-menu--top ul li a:first-child {
   border-top: 1px dashed var(--separatorColor);
 }
 

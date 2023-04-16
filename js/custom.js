@@ -17,6 +17,7 @@ toggleButton.addEventListener('click', openMenu);
 toggleButton.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         openMenu();
+        sideMenuLink[0].querySelector('a').focus();
     }
 });
 backTick.addEventListener('click', closeMenu);
