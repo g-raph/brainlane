@@ -242,12 +242,15 @@
                     flex: 3;
                 }
                 .date {
+                    flex: 3;
                     display: block;
                     height: 3.3125rem;
                     box-sizing: border-box;
                     width: 100%;
-                    min-width: 95%;
                     text-align: left;
+                    @media screen and (max-width: 960px) {
+                        min-width: 95%;
+                    }
                 }
                 .hour-container {
                     position: relative;
