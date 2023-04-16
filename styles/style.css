@@ -420,6 +420,7 @@ img {
   box-sizing: border-box;
   width: 100%;
   min-width: 95%;
+  text-align: left;
 }
 .header__reservation--bottom form .hour-container {
   position: relative;
