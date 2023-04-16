@@ -1,0 +1,285 @@
+.header {
+    position: relative;
+    &__top {
+        background-color: var(--headerBGColor);
+        height: 9.125rem;
+        transition: all .3s ease;
+        @media screen and (max-width: 640px) {
+            height: 6rem;
+        }
+        &--inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .logo {
+                img {
+                    width: 20.75rem;
+                }
+            }
+            @media screen and (max-width: 640px) {
+                .socials {
+                    display: none;
+                }
+                .logo img {
+                    width: 15rem;
+                }
+            }
+            .menu {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                p {
+                    font-size: 1.5rem;
+                    color: var(--primaryColor);
+                    @media screen and (max-width: 640px) {
+                        display: none;
+                    }
+                }
+                i {
+                    width: 3.125rem;
+                    height: 3.125rem;
+                    display: flex;
+                    cursor: pointer;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: var(--iconBGColor);
+                    border-radius: 50%;
+                    color: var(--primaryColor);
+                    font-size: 1.75rem;
+                    transition: all .3s ease;
+                    &:hover {
+                        color: var(--white);
+                        background-color: var(--secondaryColor);
+                    }
+                }
+            }
+        }
+    }
+    &__info {
+        height: 4.25rem;
+        @media screen and (max-width: 640px) {
+            height: auto;
+        }
+        &--inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--primaryColor);
+            flex-flow: row nowrap;
+            @media screen and (max-width: 640px) {
+                flex-flow: column nowrap;
+                align-items: center;
+                text-align: center;
+            }
+            p {
+                margin: 0;
+                line-height: 1.2;
+            }
+            .current-opening {
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                @media screen and (max-width: 640px) {
+                    margin-bottom: 1rem;
+                }
+                a {
+                    color: var(--secondaryColor);
+                    transition: all .3s ease;
+                    &:hover {
+                        color: var(--primaryColor);
+                    }
+                }
+            }
+            .contact-info {
+                a {
+                    color: var(--primaryColor);
+                    transition: all .3s ease;
+                    &:hover {
+                        color: var(--secondaryColor);
+                    }
+                }
+            }
+        }
+    }
+    &__image {
+        height: 55.75rem;
+        background: url(../assets/main.jpg) no-repeat center right/cover;
+        position: relative;
+        transition: all .3s ease;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255,1));
+        }
+        @media screen and (max-width: 960px) {
+            height: auto;
+            &::after {
+                width: 100%;
+            }
+        }
+        &--inner {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 14rem;
+            transition: all .3s ease;
+        }
+        &--content {
+            padding-bottom: 14rem;
+            width: 33%;
+            transition: all .3s ease;
+            @media screen and (max-width: 960px) {
+                width: 65%;
+                padding-bottom: 0;
+            }
+            @media screen and (max-width: 640px) {
+                width: 100%;
+            }
+        }
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+    }
+    &__reservation {
+        color: var(--white);
+        height: 14rem;
+        background-color: var(--reservationBGColor);
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        @media screen and (max-width: 960px) {
+            position: relative;
+            height: auto;
+        }
+        &--inner {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &--top {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            @media screen and (max-width: 960px) {
+                margin-bottom: 1rem;
+            }
+            @media screen and (max-width: 640px) {
+                flex-flow: column-reverse;
+                gap: 1rem;
+            }
+            p {
+                margin: 0;
+            }
+            .online {
+                p {
+                    color: var(--reservationColor);
+                }
+                @media screen and (max-width: 640px) {
+                    text-align: center;
+                }
+            }
+            .phone {
+                text-align: right;
+                .tel {
+                    color: var(--tertiaryColor);
+                    font-size: 1.25rem;
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                    justify-content: flex-end;
+                }
+                @media screen and (max-width: 640px) {
+                    text-align: center;
+                    .tel {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+        &--bottom {
+            width: 100%;
+            padding-bottom: 1rem;
+            text-align: center;
+            .confirm {
+                color: var(--tertiaryColor);
+            }
+            form {
+                display: flex;
+                gap: 1.875rem;
+                width: 100%;
+                flex-flow: row wrap;
+                transition: all .3s ease;
+                @media screen and (max-width: 960px) {
+                    flex-flow: column nowrap;
+                    gap: 0.875rem;
+                }
+                input, select {
+                    border: 0;
+                    font-size: 1.125rem;
+                    padding: 1rem 1.25rem;
+                    border-radius: .125rem;
+                    color: var(--textColor);
+                }
+                .email {
+                    flex: 3;
+                }
+                .date {
+                    flex: 3;
+                }
+                .hour-container {
+                    position: relative;
+                    flex: 2;
+                    .hour {
+                        appearance: none;
+                        display: inline-block;
+                        height: 100%;
+                        width: 100%;
+                    }
+                    i {
+                        position: absolute;
+                        right: 1rem;
+                        top: 1.25rem;
+                        color: var(--tertiaryColor);
+                    }
+                }
+                .persons-container {
+                    position: relative;
+                    flex: 2;
+                    .persons {
+                        appearance: none;
+                        display: inline-block;
+                        height: 100%;
+                        width: 100%;
+                    }
+                    i {
+                        position: absolute;
+                        right: 1rem;
+                        top: 1.25rem;
+                        color: var(--tertiaryColor);
+                    }
+                }
+                .submit {
+                    flex: 3;
+                    background-color: var(--tertiaryColor);
+                    color: var(--white);
+                    cursor: pointer;
+                    transition: all .3s ease;
+                    &:hover {
+                        background-color: var(--secondaryColor);
+                    }
+                }
+            }
+        }
+    }
+}

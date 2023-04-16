@@ -1,0 +1,122 @@
+.footer {
+    &__main {
+        &--top {
+            padding: 2rem 0;
+            display: flex;
+            flex-flow: row wrap;
+            gap: 2rem;
+            line-height: 2;
+            @media screen and (max-width: 640px) {
+                flex-flow: column nowrap;
+            }
+        }
+        &__block {
+            padding-top: 2.5rem;
+            @media screen and (max-width: 640px) {
+                padding-top: 0;
+            }
+            p {
+                line-height: 2;
+            }
+            &.address {
+                flex: 3;
+                color: var(--primaryColor);
+                padding-top: 0;
+                img {
+                    width: 85%;
+                }
+                a {
+                    color: var(--primaryColor);
+                    transition: all .3s ease;
+                    &:hover {
+                        color: var(--tertiaryColor);
+                    }
+                }
+                .tel {
+                    color: var(--tertiaryColor);
+                    font-size: 1.25rem;
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                }
+            }
+            &.menu {
+                flex: 2;
+                ul {
+                    margin: 1.4rem 0 0;
+                    padding: 0;
+                    list-style: none;
+                    li {
+                        line-height: 1;
+                        margin: 1rem 0;
+                        a {
+                            color: var(--textColor);
+                            transition: all .3s ease;
+                            text-decoration: none;
+                            &:hover {
+                                color: var(--tertiaryColor);
+                            }
+                        }
+                    }
+                }
+            }
+            &.hours {
+                flex: 3;
+            }
+            &.newsletter {
+                flex: 3;
+                .email-input {
+                    position: relative;
+                    input {
+                        padding: 0.75rem 1rem;
+                        width: 100%;
+                        border: 0;
+                        background: var(--borderColor);
+                        font-size: 1rem;
+                        box-sizing: border-box;
+                        color: var(--primaryColor);
+                        &::placeholder {
+                            color: var(--primaryColor);
+                            opacity: 1;
+                        }
+                    }
+                    i {
+                        color: var(--primaryColor);
+                        position: absolute;
+                        right: 1rem;
+                        top: .75rem;
+                    }
+                }
+            }
+            &--title {
+                margin: 0;
+                color: var(--primaryColor);
+            }
+        }
+        &--bottom {
+            border-top: 1px solid var(--separatorColorFooter);
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            a {
+                color: var(--tertiaryColor);
+                transition: all .3s ease;
+                &:hover {
+                    color: var(--secondaryColor);
+                }
+            }
+        }
+    }
+    &__maps {
+        height: 17rem;
+        position: relative;
+        iframe {
+            border: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

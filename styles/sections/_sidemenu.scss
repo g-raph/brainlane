@@ -1,0 +1,68 @@
+.backtick {
+    position: fixed;
+    width: 0;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 4;
+    background-color: var(--borderColor);
+    opacity: 0;
+    transition: opacity .15s ease;
+    &.open {
+        width: 100vw;
+        opacity: 1;
+    }
+}
+
+.side-menu {
+    position: fixed;
+    left: -20rem;
+    top: 0;
+    width: 20rem;
+    height: 100vh;
+    background: white;
+    z-index: 5;
+    box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    box-sizing: border-box;
+    display: flex;
+    padding: 2rem;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    transition: all .3s ease;
+    overflow-y: auto;
+    gap: 2rem;
+    &.open {
+        left: 0;
+        opacity: 1;
+    }
+    &--top {
+        img {
+            margin-bottom: 4rem;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                padding: .75rem 1rem;
+                border-bottom: 1px dashed var(--separatorColor);
+                font-size: 1.125rem;
+                background-color: transparent;
+                transition: all .3s ease;
+                cursor: pointer;
+                &:hover {
+                    background-color: var(--iconBGColor);
+                    color: var(--primaryColor);
+                }
+                &.active {
+                    background-color: var(--tertiaryColor);
+                    color: var(--white);
+                }
+                &:first-child {
+                    border-top: 1px dashed var(--separatorColor);
+                }
+            }
+        }
+    }
+}

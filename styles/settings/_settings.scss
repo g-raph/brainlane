@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;700&family=Cabin:wght@400;600;700&display=swap');
+
+:root {
+    --primaryColor: #1A2762;
+    --secondaryColor: #81B761;
+    --tertiaryColor: #BCA269;
+    --headerBGColor: rgba(225, 221, 218, .29);
+    --reservationBGColor: rgba(19, 26, 56, .81);
+    --white: #FFF;
+    --textColor: #888;
+    --borderColor: rgba(136, 136, 136, .35);
+    --separatorColor: rgba(151, 151, 151, .46);
+    --separatorColorFooter: #EEF1EC;
+    --reservationColor: #9EA2B7;
+    --captionFresh: rgba(188, 162, 105, .85);
+    --captionPlates: rgba(129, 183, 97, .85);
+    --iconBGColor: #DEDEE5;
+    --screensSM: 40rem;
+    --screensMD: 60.625rem;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Cabin', sans-serif;
+    font-size: 1rem;
+    color: var(--textColor);
+}
+
+h1, h2, h4 {
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0;
+    color: var(--primaryColor);
+}
+
+h1 {
+    font-size: 4.25rem;
+    line-height: 0.8;
+    @media screen and (max-width: 960px) {
+        font-size: 3.75rem;
+    }
+    @media screen and (max-width: 640px) {
+        font-size: 3.25rem;
+    }
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 1.625rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+p {
+    line-height: 1.75rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn {
+    border-radius: 0.3125rem;
+    padding: 0.75rem 2rem;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: none;
+    transition: all .15s ease;
+    &--default {
+        border: 0.125rem solid var(--borderColor);
+        background-color: transparent;
+        color: var(--textColor);
+    }
+    &--cta {
+        border: 0.125rem solid var(--secondaryColor);
+        background-color: var(--secondaryColor);
+        color: var(--white);
+    }
+    &--tertiary {
+        border: 0.125rem solid var(--tertiaryColor);
+        background-color: var(--tertiaryColor);
+        color: var(--white);
+    }
+    &--transparent {
+        border: 0.125rem solid var(--white);
+        background-color: transparent;
+        color: var(--white);
+        font-size: 1rem;
+        text-decoration: underline;
+        padding: 0.75rem 1rem;
+        i {
+            margin-left: .5rem;
+        }
+    }
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 .5rem rgba(0,0,0,0.3);
+    }
+}
+
+.outer-container { 
+    display: flex;
+    justify-content: center;
+    .inner-container {
+        width: 70rem;
+        max-width: 100%;
+        padding: 2rem 1rem;
+    }
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    a {
+        text-decoration: none;
+        i {
+            width: 2.375rem;
+            height: 2.375rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--iconBGColor);
+            border-radius: 50%;
+            color: var(--primaryColor);
+            transition: all .3s ease;
+            &:hover {
+                color: var(--white);
+                background-color: var(--secondaryColor);
+            }
+            &.fa-instagram {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
