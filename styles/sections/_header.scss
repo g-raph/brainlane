@@ -241,26 +241,12 @@
                 .email {
                     flex: 3;
                 }
-                .date-container {
-                    position: relative;
-                    flex: 3;
+                .date {
+                    display: block;
                     height: 3.3125rem;
-                    .date {
-                        display: block;
-                        height: 3.3125rem;
-                        box-sizing: border-box;
-                        width: 100%;
-                        min-width: calc(100% - 2.5rem);
-                    }
-                    i {
-                        position: absolute;
-                        z-index: 2;
-                        right: 0;
-                        top: 0.125rem;
-                        color: var(--tertiaryColor);
-                        background: white;
-                        padding: 1rem;
-                    }
+                    box-sizing: border-box;
+                    width: 100%;
+                    min-width: calc(100% - 2.5rem);
                 }
                 .hour-container {
                     position: relative;
