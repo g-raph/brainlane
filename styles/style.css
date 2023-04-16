@@ -420,7 +420,9 @@ img {
 }
 .header__reservation--bottom form .date-container .date {
   box-sizing: border-box;
-  display: inline-block;
+  appearance: textfield;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
   height: 3.3125rem;
   width: 100%;
 }
