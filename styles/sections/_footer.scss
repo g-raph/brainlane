@@ -38,6 +38,9 @@
                     display: flex;
                     gap: 1rem;
                     align-items: center;
+                    span {
+                        color: var(--tertiaryColor);
+                    }
                 }
             }
             &.menu {

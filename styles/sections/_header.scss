@@ -203,6 +203,9 @@
                     text-align: center;
                     .tel {
                         justify-content: center;
+                        span {
+                            color: var(--tertiaryColor);
+                        }
                     }
                 }
             }
@@ -224,7 +227,7 @@
                     flex-flow: column nowrap;
                     gap: 0.875rem;
                 }
-                input, select {
+                input, select, button {
                     border: 0;
                     font-size: 1.125rem;
                     padding: 1rem 1.25rem;
@@ -234,8 +237,24 @@
                 .email {
                     flex: 3;
                 }
-                .date {
+                .date-container {
+                    position: relative;
                     flex: 3;
+                    .date {
+                        box-sizing: border-box;
+                        display: inline-block;
+                        height: 3.3125rem;
+                        width: 100%;
+                    }
+                    i {
+                        position: absolute;
+                        z-index: 2;
+                        right: 0;
+                        top: 0.125rem;
+                        color: var(--tertiaryColor);
+                        background: white;
+                        padding: 1rem;
+                    }
                 }
                 .hour-container {
                     position: relative;
@@ -269,12 +288,13 @@
                         color: var(--tertiaryColor);
                     }
                 }
-                .submit {
+                button.submit {
                     flex: 3;
                     background-color: var(--tertiaryColor);
                     color: var(--white);
                     cursor: pointer;
                     transition: all .3s ease;
+                    white-space: nowrap;
                     &:hover {
                         background-color: var(--secondaryColor);
                     }

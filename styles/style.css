@@ -375,6 +375,9 @@ img {
   .header__reservation--top .phone .tel {
     justify-content: center;
   }
+  .header__reservation--top .phone .tel span {
+    color: var(--tertiaryColor);
+  }
 }
 .header__reservation--bottom {
   width: 100%;
@@ -397,7 +400,7 @@ img {
     gap: 0.875rem;
   }
 }
-.header__reservation--bottom form input, .header__reservation--bottom form select {
+.header__reservation--bottom form input, .header__reservation--bottom form select, .header__reservation--bottom form button {
   border: 0;
   font-size: 1.125rem;
   padding: 1rem 1.25rem;
@@ -407,8 +410,24 @@ img {
 .header__reservation--bottom form .email {
   flex: 3;
 }
-.header__reservation--bottom form .date {
+.header__reservation--bottom form .date-container {
+  position: relative;
   flex: 3;
+}
+.header__reservation--bottom form .date-container .date {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 3.3125rem;
+  width: 100%;
+}
+.header__reservation--bottom form .date-container i {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0.125rem;
+  color: var(--tertiaryColor);
+  background: white;
+  padding: 1rem;
 }
 .header__reservation--bottom form .hour-container {
   position: relative;
@@ -442,14 +461,15 @@ img {
   top: 1.25rem;
   color: var(--tertiaryColor);
 }
-.header__reservation--bottom form .submit {
+.header__reservation--bottom form button.submit {
   flex: 3;
   background-color: var(--tertiaryColor);
   color: var(--white);
   cursor: pointer;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
-.header__reservation--bottom form .submit:hover {
+.header__reservation--bottom form button.submit:hover {
   background-color: var(--secondaryColor);
 }
 
@@ -640,6 +660,9 @@ img {
   display: flex;
   gap: 1rem;
   align-items: center;
+}
+.footer__main__block.address .tel span {
+  color: var(--tertiaryColor);
 }
 .footer__main__block.menu {
   flex: 2;
