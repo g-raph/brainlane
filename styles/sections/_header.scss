@@ -246,12 +246,13 @@
                     flex: 3;
                     height: 3.3125rem;
                     .date {
+                        display: block;
                         height: 3.3125rem;
                         box-sizing: border-box;
                         appearance: textfield;
                         -webkit-appearance: textfield;
                         -moz-appearance: textfield;
-                        width: 100%;
+                        min-width: 100%;
                     }
                     i {
                         position: absolute;
