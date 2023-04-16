@@ -44,11 +44,19 @@ const handleSubmit = (e) => {
     e.preventDefault();
     const email = form.querySelector('[name=email]');
     const date = form.querySelector('[name=date]');
+    const dateText = form.querySelector('[name=date-text]');
     const hour = form.querySelector('[name=hour]');
     const persons = form.querySelector('[name=persons]');
     const reservationContainer = document.querySelector('.header__reservation--bottom');
     const confirmText = `<h3 class="confirm">Bedankt voor je aanvraag voor ${persons.value} personen, op ${date.value} om ${hour.value}u.<br>
-                        We bevestigen zo spoedig mogelijk op emailadres ${email.value}.</h3>`;
+    We bevestigen zo spoedig mogelijk op emailadres ${email.value}.</h3>`;
     reservationContainer.innerHTML = confirmText;
 }
 form.addEventListener('submit', handleSubmit);
+
+// datepicker workaround for mobile devices
+const handleDatePicker = (e) => {
+    const dateText = form.querySelector('[name=date-text]');
+    dateText.value = e.target.value;
+}
+

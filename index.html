@@ -81,7 +81,11 @@
                 <div class="header__reservation--bottom">
                     <form class="reservation-form">
                         <input class="email" type="email" name="email" placeholder="E-mail *" required>
-                        <input class="date" type="date" name="date" placeholder="Datum" required>
+                        <div class="date-container">
+                            <input class="date-text" type="text" name="date-text" placeholder="Datum">
+                            <input class="date" type="date" name="date" onchange="handleDatePicker(event)" required>
+                            <i class="fa-regular fa-calendar-days"></i>
+                        </div>
                         <div class="hour-container">
                             <select class="hour" name="hour" required>
                                 <option value="" disabled selected hidden>Uur</option>
