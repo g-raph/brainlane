@@ -38,8 +38,9 @@
                     display: flex;
                     gap: 1rem;
                     align-items: center;
-                    span {
+                    a {
                         color: var(--tertiaryColor);
+                        text-decoration: none;
                     }
                 }
             }

@@ -361,12 +361,16 @@ img {
   text-align: right;
 }
 .header__reservation--top .phone .tel {
-  color: var(--tertiaryColor);
   font-size: 1.25rem;
   display: flex;
   gap: 1rem;
   align-items: center;
   justify-content: flex-end;
+  color: var(--tertiaryColor);
+}
+.header__reservation--top .phone .tel a {
+  color: var(--tertiaryColor);
+  text-decoration: none;
 }
 @media screen and (max-width: 640px) {
   .header__reservation--top .phone {
@@ -661,8 +665,9 @@ img {
   gap: 1rem;
   align-items: center;
 }
-.footer__main__block.address .tel span {
+.footer__main__block.address .tel a {
   color: var(--tertiaryColor);
+  text-decoration: none;
 }
 .footer__main__block.menu {
   flex: 2;
