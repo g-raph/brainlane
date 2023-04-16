@@ -231,6 +231,15 @@
                     flex-flow: column nowrap;
                     gap: 0.875rem;
                 }
+                label {
+                    display: none;
+                    @media screen and (max-width: 960px) {
+                        text-align: left;
+                        display: block;
+                        margin-bottom: -.5rem;
+                    }
+
+                }
                 input, select, button {
                     border: 0;
                     font-size: 1.125rem;

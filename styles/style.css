@@ -404,6 +404,16 @@ img {
     gap: 0.875rem;
   }
 }
+.header__reservation--bottom form label {
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  .header__reservation--bottom form label {
+    text-align: left;
+    display: block;
+    margin-bottom: -0.5rem;
+  }
+}
 .header__reservation--bottom form input, .header__reservation--bottom form select, .header__reservation--bottom form button {
   border: 0;
   font-size: 1.125rem;

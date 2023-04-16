@@ -54,9 +54,3 @@ const handleSubmit = (e) => {
 }
 form.addEventListener('submit', handleSubmit);
 
-// datepicker workaround for mobile devices
-const handleDatePicker = (e) => {
-    const dateText = form.querySelector('[name=date-text]');
-    dateText.value = e.target.value;
-}
-

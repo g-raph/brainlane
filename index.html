@@ -80,9 +80,12 @@
                 </div>
                 <div class="header__reservation--bottom">
                     <form class="reservation-form">
-                        <input class="email" type="email" name="email" placeholder="E-mail *" required>
-                        <input class="date" type="date" name="date" required>
-                        <div class="hour-container">
+                        <label for="email">E-mailadres</label>
+                        <input id="email" class="email" type="email" name="email" placeholder="E-mail *" required>
+                        <label for="date">Datum</label>
+                        <input id="date" class="date" type="date" name="date" required>
+                        <label for="hour">Uur</label>
+                        <div id="hour" class="hour-container">
                             <select class="hour" name="hour" required>
                                 <option value="" disabled selected hidden>Uur</option>
                                 <option value="15">15u00</option>
@@ -91,7 +94,8 @@
                             </select>
                             <i class="fa-solid fa-chevron-down"></i>
                         </div>
-                        <div class="persons-container">
+                        <label for="persons">Aantal personen</label>
+                        <div id="persons" class="persons-container">
                             <select class="persons" name="persons" required>
                                 <option value="2">2 pers.</option>
                                 <option value="3">3 pers.</option>
