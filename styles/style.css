@@ -414,26 +414,14 @@ img {
 .header__reservation--bottom form .email {
   flex: 3;
 }
-.header__reservation--bottom form .date-container {
-  position: relative;
-  flex: 3;
-}
-.header__reservation--bottom form .date-container .date {
+.header__reservation--bottom form .date {
   box-sizing: border-box;
-  appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   height: 3.3125rem;
   width: 100%;
-}
-.header__reservation--bottom form .date-container i {
-  position: absolute;
-  z-index: 2;
-  right: 0;
-  top: 0.125rem;
-  color: var(--tertiaryColor);
-  background: white;
-  padding: 1rem;
+  flex: 3;
 }
 .header__reservation--bottom form .hour-container {
   position: relative;
